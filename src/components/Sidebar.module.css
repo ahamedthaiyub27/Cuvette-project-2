@@ -1,0 +1,266 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  z-index: 100;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  box-shadow: #333;
+}
+
+.sidebar.mobile-open {
+  left: 0;
+}
+
+.mobile-menu-button {
+  position: fixed;
+  top: 35px;
+  left: 35px;
+  width: 50px;
+  height: 50px;
+  background: #001F8B;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.mobile-menu-button:hover {
+  background: #0e006b;
+}
+
+button,
+.group-item,
+.mobile-menu-button,
+.add-new-group {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover,
+.group-item:hover,
+.mobile-menu-button:hover,
+.add-new-group:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    left: 0;
+  }
+  .mobile-menu-button {
+    display: none;
+  }
+  .add-new-group-btn{
+    left: 10px;
+    bottom: 10px;
+
+  }
+}
+
+.sidebar-container {
+  width: 30%;
+  min-width: 300px;
+  max-width: 400px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #000;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.groups-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 80px; /* Space for the add button */
+}
+
+.group-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.group-item:hover {
+  background: #f0f0f0;
+}
+
+.group-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.add-new-group-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 200px;
+  width: 60px;
+  height: 60px;
+  background: #001F8B;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 102;
+  transition: all 0.2s ease;
+}
+
+.add-new-group-btn:hover {
+  background: #0e006b;
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.create-group-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.create-group-modal h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.color-selection label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-option.selected {
+  border: 2px solid #000;
+  transform: scale(1.1);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.modal-close-button:hover {
+  transform: scale(1.2);
+}
+
+.create-button {
+  background: #001F8B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.create-button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .add-new-group-btn {
+    left: calc(50% - 30px);
+  }
+}

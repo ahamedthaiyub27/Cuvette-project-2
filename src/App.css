@@ -1,0 +1,26 @@
+/* ********************************************************************* */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-area {
+  flex: 1;
+  overflow: auto;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .content-area {
+    margin-left: 300px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
