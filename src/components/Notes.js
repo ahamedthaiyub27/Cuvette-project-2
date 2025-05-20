@@ -106,6 +106,8 @@ const Notes = () => {
                 <p>{note.content}</p>
                 <div className={styles['note-footer']}>
                   <span className={styles['note-time']}>{formatTime(note.createdAt)}</span>
+                  
+                  
                   <span className={styles['note-date']}>{formatDate(note.createdAt)}</span>
                 </div>
               </div>
