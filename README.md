@@ -16,7 +16,7 @@ https://github.com/ahamedthaiyub27/capstone-project-2
 ## How to Run Locally
 
 ```bash
-git clone https://github.com/ahamedthaiyub27/capstone-project-2.git
+https://github.com/ahamedthaiyub27/capstone-project-2.git](https://github.com/ahamedthaiyub27/Cuvette-project-2.git)
 
 npm install
 npm start
